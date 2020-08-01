@@ -9,6 +9,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-target
    */
   target: "static",
+  router: {
+    base: "/UltimateQuotes/",
+  },
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -59,12 +62,12 @@ export default {
    */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    "bootstrap-vue/nuxt",
+    // "bootstrap-vue/nuxt",
     "@nuxtjs/pwa",
   ],
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: { transpile: ["vue-lazyload"] },
 };
